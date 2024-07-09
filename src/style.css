@@ -1,0 +1,178 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+:root {
+  --clr-Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+  --clr-Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+  --clr-Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+  --clr-Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --clr-Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+  --fw-7: 700;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  background: url("/images/bg-header-desktop.svg") no-repeat,
+    var(--clr-Light-Grayish-Cyan-Background);
+  background-size: 100% auto;
+}
+
+.panel {
+  margin-block: 7.2rem;
+}
+
+.info-container,
+.selectors-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(90%, 1110px);
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px 40px;
+  box-shadow: 0 10px 1rem hsl(180, 29%, 70%);
+  border-radius: 0.5rem;
+}
+
+.row,
+.main-part {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-part {
+  flex: 1;
+}
+.row {
+  flex-wrap: wrap;
+}
+
+.left-part {
+  flex-direction: row;
+}
+
+.main-part {
+  gap: 1.5rem;
+}
+
+.position {
+  font-weight: var(--fw-7);
+  color: var(--clr-Very-Dark-Grayish-Cyan);
+  font-size: 1.2rem;
+}
+.position:hover {
+  color: var(--clr-Desaturated-Dark-Cyan);
+  cursor: pointer;
+}
+
+.sub-text {
+  color: var(--clr-Dark-Grayish-Cyan);
+}
+
+.company {
+  color: var(--clr-Desaturated-Dark-Cyan);
+  font-weight: var(--fw-7);
+  font-size: 1.1rem;
+}
+
+.content > * {
+  margin-block: 0.6rem;
+}
+
+.item {
+  border: none;
+  color: var(--clr-Desaturated-Dark-Cyan);
+  font-weight: var(--fw-7);
+  background-color: var(--clr-Light-Grayish-Cyan-Filter-Tablets);
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+.item:hover {
+  background-color: var(--clr-Desaturated-Dark-Cyan);
+  color: white;
+  cursor: pointer;
+}
+
+.new,
+.featured {
+  text-transform: uppercase;
+  border-radius: 2rem;
+  padding: 0 10px;
+  color: white;
+}
+.new {
+  background-color: var(--clr-Desaturated-Dark-Cyan);
+  margin-left: 1rem;
+}
+.featured {
+  background-color: var(--clr-Very-Dark-Grayish-Cyan);
+}
+
+.selectors-container .item {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.selectors-container .row {
+  gap: 0;
+  margin-block: 0.5rem;
+}
+
+.remove-btn {
+  color: white;
+  background-color: var(--clr-Desaturated-Dark-Cyan);
+  border: none;
+  padding: 3px 10px;
+  border-radius: 0 0.5rem 0.5rem 0;
+  height: 28.5px;
+  margin-right: 1rem;
+}
+.remove-btn:hover {
+  background-color: var(--clr-Very-Dark-Grayish-Cyan);
+}
+.clear {
+  border: none;
+  background-color: transparent;
+  color: var(--clr-Desaturated-Dark-Cyan);
+  font-weight: var(--fw-7);
+  font-size: 1.1rem;
+}
+.clear:hover {
+  border-bottom: 1px solid var(--clr-Very-Dark-Grayish-Cyan);
+}
+
+.featured-container {
+  border-left: 5px solid var(--clr-Desaturated-Dark-Cyan);
+}
+
+@media (width < 900px) {
+  .info-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-block: 4rem;
+  }
+  .main-part {
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    left: 0;
+    top: -3.5rem;
+    max-width: 4rem;
+  }
+  .content > * {
+    margin-block: 0.7rem;
+  }
+  body {
+    background: url("/images/bg-header-mobile.svg") no-repeat,
+      var(--clr-Light-Grayish-Cyan-Background);
+    background-size: 100% auto;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
